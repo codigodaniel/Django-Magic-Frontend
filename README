@@ -1,0 +1,32 @@
+Hello! I am Daniel Ceillan.
+
+Thanks for trying this tool. I am looking for a job, so if you can hire me, I will be thankfully... :D
+
+Don't forget to see the "example_project" folder. It is an complete example. 
+
+What you can do with Django-Magic-Frontend (DMF):
+
++ build in minutes the basic templates, views and urls of all your django models. 
+++ Add new, Update, Delete, List all, View details
++ view all the detailed fields of any of your models. 
+++ In the detail view you can see all the fields of the model. 
++ Auto-generate a link, to a foreing Object. 
+++ In the detail view you can see the link to the related model automatically. 
++ navigate in a breadcrumb menu
++ auto-generate the aliases for each automagic url 
+
+DMF uses the generic views of django for all that, automatically build the urlpatterns, and has a tool for you, to propagate the required templates for that actions. 
+
+*********************************************************************
+************************* HOW TO IMPLEMENT IT ***********************
+*********************************************************************
+
+1) copy DMF to your local apps folder, or install it in python paths. 
+2) add django-magic-frontend to your INSTALLED_APPS
+3) extend the models from the DMF 'GenericModel'
+4) create the generic templates for one model unitl it is on your need. 
+5) use 'tools.copier.py' to duplicate the required templates.
+6) run it :) and you are done! 
+
+Don't forget to see the "example_project" folder. It is an complete example. 
+
