@@ -3,7 +3,6 @@
 <div class="breadcrumbs">
      <a href="{%url homepage%}">{% trans "Home" %}</a> &rsaquo;
      <a href="/{{ opts.app_label }}/"> {{ opts.app_label|capfirst }}</a> &rsaquo; 
-     
      {% if not dummy_object %}
      <a href="/{{ opts.app_label }}/{{ opts.module_name }}/page/">All {{ opts.verbose_name_plural|capfirst }}</a> &rsaquo; 
      {% endif %}
