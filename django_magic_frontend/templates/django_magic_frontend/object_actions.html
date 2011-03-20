@@ -1,0 +1,10 @@
+{% load i18n %}
+{%if object%}
+<table>
+    <tr>
+        <td valign="top"> <a href="{{ object.get_absolute_url }}" >View</a> |</td>
+        <td valign="top"> <a href="{{ object.get_update_url }}" >Edit</a> | </td>
+        <td><a href="{{ object.get_delete_url }}" >Delete</a></td>
+    </tr>
+</table>
+{%endif%}

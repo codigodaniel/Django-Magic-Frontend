@@ -1,0 +1,16 @@
+{%extends 'base.html'%}
+{%load i18n%}
+{% block breadcrumbs %}
+{%include 'django_magic_frontend/breadcrumbs.html'%}
+{% endblock %}
+
+{% block content%}
+{%include 'django_magic_frontend/object_title.html'%}
+{%include 'django_magic_frontend/object_detail.html'%}
+<form action="" method="post">
+<input type="submit" value="Delete?">
+</form>
+{%include 'django_magic_frontend/object_actions.html'%}
+{%endblock%}
+
+

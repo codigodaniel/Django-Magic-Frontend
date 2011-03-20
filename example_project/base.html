@@ -1,0 +1,99 @@
+{% load i18n %}
+<html>
+<head>
+<style>
+body {
+	margin:0;
+	padding:40px;
+	background:#fff;
+	font:80% Arial, Helvetica, sans-serif;
+	color:#555;
+	line-height:180%;
+}
+
+h1{
+	font-size:180%;
+	font-weight:normal;
+	color:#555;
+}
+
+a{
+	text-decoration:none;
+	color:#f30;	
+}
+
+p{
+	clear:both;
+	margin:0;
+	padding:.5em 0;
+	text-align:justify;
+}
+
+.button-dload span, .button-dload, .button, .button span
+{
+	padding:0;
+	margin:0;
+}
+
+a.button
+{
+	
+	display:block;
+	
+	background-position:top right;
+	padding: 0 35px 0 0;
+	margin:0;
+}
+
+a.button strong
+{
+	color:#FFFFFF;
+	display:block;
+	text-align:left;
+	font-size:116%;
+	font-weight:bold;
+	line-height:1;
+}
+
+a.button span
+{
+	color:#92FF30;
+	height:30px;
+	display:block;
+	line-height:17px;
+	cursor:pointer;
+	padding:10px 7px 10px 11px;
+	font-size:11px;
+}
+</style>
+	{% block head %}
+
+	{% endblock %}
+</head>
+<body>
+<div id="menu">
+</div>
+
+<div>
+{% block status_text %}
+{% endblock %}
+</div>
+{% block breadcrumbs%}
+	<a href="{% url homepage%}">Home</a>
+<br> Choose an app:
+<br><a href="{% url catalog%}">Catalog</a> |
+{%endblock%}
+
+<div id="content">
+{% block content %}
+
+
+{% endblock %}
+</div>
+
+{% block footer %}
+<div class="foot">
+</div>
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,6 @@
+{%load i18n%}
+{%for field, value, url in object.show_detail%}
+{%if value%}
+{%endif%}
+<br><b>{{field|capfirst}}:</b> {%if url%}<a href="{{url}}">{{value}}</a>{%else%}{{value}}{%endif%}
+{%endfor%}

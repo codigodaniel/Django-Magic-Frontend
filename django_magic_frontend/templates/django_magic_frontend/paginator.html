@@ -1,0 +1,51 @@
+{% load i18n %}
+{%if is_paginated%}
+        <tr>
+            <td>
+                {% if has_previous %}
+                    <a href="{{previous}}"   >	{%trans 'previous' %}</a>
+                {%else %}
+                    {% trans 'previous' %}
+                {%endif %}
+                |
+                {% for indice in  paginator.page_range  %}
+                <a href="{{indice}}"> {{ indice }}</a>
+                {%if not forloop.last%} |{%endif %}
+                {%endfor %}
+                |
+                {% if has_next %}
+                            <a href="{{next}}" >{% trans 'next' %}</a>
+                {%else %}
+                            {% trans 'next' %}
+                {%endif %}
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                {% trans 'Page: ' %} {{ page }} {% trans 'of' %} {{ paginator.num_pages }}. 
+                <br>Total elements: {{ paginator.count }}
+            </td>
+        </tr>
+{% comment %}
+        <tr><td>
+            <h3>Debug:</h3>
+            
+            <br> page {{ page }}*
+            <br> object_list {{ object_list }}*
+            <br> has_previous {{ has_previous }}*
+            <br> has_next {{ has_next }}*
+            <br> previous {{ previous }}*
+            <br> next {{ next }}*
+            <br>    
+            <br>paginator {{ paginator }}*
+            <br> paginator.num_pages {{ paginator.num_pages }}*
+            <br> paginator.page_range {{ paginator.page_range }}*
+            <br> paginator.count {{ paginator.count }}*
+            <br>
+            <br>page_obj {{ page_obj }}*
+            <br> page_obj.has_other_pages {{ page_obj.has_other_pages }}*
+            <br> page_obj.start_index {{ page_obj.start_index }}*
+            <br> page_obj.end_index {{ page_obj.end_index }}*
+       </td></tr>
+{% endcomment %}
+{%endif%}

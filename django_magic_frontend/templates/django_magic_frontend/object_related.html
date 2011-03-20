@@ -1,0 +1,9 @@
+{% load i18n %}
+{%if element%}
+    <tr>
+        <td>{{element|capfirst}}</td>
+        <td><a href="{{element.get_absolute_url}}">View</a></td>
+        <td><a href="{{element.get_update_url}}">Edit</a></td>
+        <td><a href="{{element.get_delete_url}}">Delete</a></td>
+    </tr>
+{%endif%}
