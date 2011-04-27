@@ -1,0 +1,29 @@
+{%extends 'base.html'%}
+{% load i18n %}
+{% block breadcrumbs %}
+{%include 'django_magic_frontend/breadcrumbs.html'%}
+{% endblock %}
+{% block content %}
+<h1>{{opts.verbose_name|capfirst}} List</h1>
+<div >
+    <table border="1" >
+       <tr>
+	      <td >Object</td><td >Actions</td>
+       </tr>
+       <tr><td></td><td><a href="{{ dummy_object.get_create_url }}">Create {{opts.verbose_name|capfirst}}</a></td></tr>
+       {% for object in object_list %}
+       {%if forloop.first%}{%endif%}
+       <tr >
+	      <td ><a href="{{ object.get_absolute_url }}">{{ object }}</a></td>
+          <td >
+            {%include 'django_magic_frontend/object_actions.html'%}
+            {% if user.is_authenticated %}
+            {% endif %}
+            </td>
+        </tr>
+        {%if forloop.last%}{%endif%}
+        {% endfor %}
+        {%include 'django_magic_frontend/paginator.html'%}
+    </table>
+</div>
+{% endblock %}

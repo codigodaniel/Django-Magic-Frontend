@@ -13,7 +13,7 @@ class CategoryTestCase(TestCase):
         self.tc.save()
     def testCreateUrl(self):
         """
-        Tests that we can get the CREATION url of a category model
+        Tests that we can get the creation url of a category model
         """
         #~ Arrange
         #~ Given a test category (self.tc)
@@ -23,7 +23,7 @@ class CategoryTestCase(TestCase):
         self.assertEqual(url,'/catalog/category/new/')
     def testAbsoluteUrl(self):
         """
-        Tests that we can get the ABSOLUTE url of a category model
+        Tests that we can get the absolute url of a category model
         """
         #~ Arrange
         #~ Given a test category (self.tc)
@@ -31,26 +31,6 @@ class CategoryTestCase(TestCase):
         url=self.tc.get_absolute_url()
         #~ Assert
         self.assertEqual(url,'/catalog/category/1/')
-    def testDetailUrl(self):
-        """
-        Tests that we can get the UPDATE url of a category model
-        """
-        #~ Arrange
-        #~ Given a test category (self.tc)
-        #~ Act
-        url=self.tc.get_update_url()
-        #~ Assert
-        self.assertEqual(url,'/catalog/category/1/update/')
-    def testListUrl(self):
-        """
-        Tests that we can get the LIST url of a category model
-        """
-        #~ Arrange
-        #~ Given a test category (self.tc)
-        #~ Act
-        url=self.tc.get_index_url()
-        #~ Assert
-        self.assertEqual(url,'/catalog/category/page/')
         
 '''
 assertEqual(a, b)   a == b   
@@ -58,3 +38,4 @@ assertNotEqual(a, b)    a != b
 assertTrue(x)   bool(x) is True      
 assertFalse(x)  bool(x) is False     
 '''
+

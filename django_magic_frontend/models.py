@@ -21,7 +21,7 @@ class EditableAutoDateField(DateTimeField):
         if auto_now or auto_now_add:
             self.blank=True
     def pre_save(self, model_instance, add):
-        print add
+        #~ print add
         if self.auto_now or (self.auto_now_add and add):
             value = datetime.datetime.now()
             setattr(model_instance, self.attname, value)
@@ -29,7 +29,7 @@ class EditableAutoDateField(DateTimeField):
         else:
             return super(DateTimeField, self).pre_save(model_instance, add)
     
-#abstract Model... this is a master piece :B just created... muehehehe
+#abstract Model... this is a master piece :B ... muehehehe
 class GenericModel(models.Model):
     class Meta:
         abstract=True
@@ -50,9 +50,9 @@ class GenericModel(models.Model):
     def get_index_url_regexp(self):
         return "^%s/page/(?P<page>[0-9|last]+)?$" % (self._meta.module_name)
     def get_delete_url_regexp(self):
-        return "^%s/(?P<object_id>\d+)/delete$" % (self._meta.module_name)
+        return "^%s/(?P<object_id>\d+)/delete/$" % (self._meta.module_name)
     def get_update_url_regexp(self):
-        return "^%s/(?P<object_id>\d+)/update$" % (self._meta.module_name)
+        return "^%s/(?P<object_id>\d+)/update/$" % (self._meta.module_name)
     def get_absolute_url_alias(self):
         return "%s_%s_absolute" % (self._meta.app_label,self._meta.module_name)
     def get_create_url_alias(self):

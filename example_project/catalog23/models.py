@@ -60,3 +60,4 @@ this are the generated urls
 ^catalog/ ^product/(?P<object_id>\d+)/update$
 ^catalog/ ^product/(?P<object_id>\d+)/delete$
 '''
+

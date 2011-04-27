@@ -82,15 +82,18 @@ import os
 #~ print os.path.dirname(__file__)
 #~ print __file__
 PATH_DEMO=os.path.realpath(os.path.dirname(__file__))
-
+#~ print os.path.dirname(__file__)
+#~ print PATH_DEMO
+#~ print PATH_DEMO+'/../django_magic_frontend/templates'
+#~ print os.path.realpath(PATH_DEMO+'/../django_magic_frontend/templates')
 TEMPLATE_DIRS = (
     '',
     PATH_DEMO+'/catalog/templates', 
-    PATH_DEMO+'/../django_magic_frontend/templates', 
+    os.path.realpath(PATH_DEMO+'/../django_magic_frontend/templates'), 
 )
 
 import sys
-sys.path.append(PATH_DEMO+'/../')
+sys.path.append(os.path.realpath(PATH_DEMO+'/../'))
 
 INSTALLED_APPS = (
     'django.contrib.auth',
@@ -101,4 +104,7 @@ INSTALLED_APPS = (
     #~ this are our apps... :)
     'django_magic_frontend',
     'catalog',
+    #~ 'django_nose'
 )
+
+#~ TEST_RUNNER='django_nose.NoseTestSuiteRunner'
