@@ -34,3 +34,8 @@ DMF uses the generic views of django for all that, automatically build the urlpa
 
 Don't forget to see the "example_project" folder. It is a complete example. 
 
+You can locate on the "example_project" folder, and type:
+
+python manage.py runserver
+
+and see it working on the browser (localhost:8000)
