@@ -39,3 +39,4 @@ You can locate on the "example_project" folder, and type:
 python manage.py runserver
 
 and see it working on the browser (localhost:8000)
+
