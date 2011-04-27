@@ -1,10 +1,11 @@
 Hello! I am Daniel Ceillan.
 
-Thanks for trying this tool. I am looking for a job, so if you can hire me, I will be thankfully... :D
+Thanks for trying this tool. I am looking for a job, so if you can hire me, 
+I will be thankfully... :D
 
 Here you can download my CV: http://dcin.com.ar/daniel_ceillan.pdf
 
-Don't forget to see the "example_project" folder. It is an complete example. 
+Don't forget to see the "example_project" folder. It is a complete example. 
 
 What you can do with Django-Magic-Frontend (DMF):
 
@@ -17,9 +18,14 @@ What you can do with Django-Magic-Frontend (DMF):
 + navigate in a breadcrumb menu
 + auto-generate the aliases for each automagic url 
 + use a generic view to add a related object
-++ if you have Category, and Product. And a Category has many Products, you can use the "create_related_object" view to add a Product to a Category, and you won't view in the form the drop down box. And it will be saved as a child. 
+++ if you have Category, and Product. And a Category has many Products, 
+you can use the "create_related_object" view to add a Product to a Category, 
+and you won't view in the form the drop down box. And it will be saved as a 
+child. 
 
-DMF uses the generic views of django for all that, automatically build the urlpatterns, and has a tool for you, to propagate the required templates for that actions. 
+DMF uses the generic views of django for all that, automatically build the 
+urlpatterns, and has a tool for you, to propagate the required templates for 
+that actions. 
 
 *********************************************************************
 ************************* HOW TO IMPLEMENT IT ***********************
